@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - M Zidan Zibril Irzami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border: 3px solid #667eea;
+            border-radius: 50%;
+            background: white;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 23px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #667eea;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .skill-bar {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 2s ease-in-out;
+        }
+        
+        .cert-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cert-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close-modal:hover {
+            color: #000;
+        }
+        
+        .certificate-image {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .header, .section {
+                padding: 20px;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .modal-content {
+                max-width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<style>
+  .music-player {
+    background: #1c1c1c;
+    padding: 15px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    color: #fff;
+    width: 280px;
+    margin: 20px auto;
+  }
+
+  .music-player h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #bbb;
+  }
+
+  .music-player audio {
+    width: 100%;
+    height: 30px;
+    filter: invert(100%) hue-rotate(180deg);
+    outline: none;
+    border-radius: 8px;
+  }
+</style>
+
+    <div class="cv-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-image">
+                <img src="assets/image/anjay.jpg" alt="Foto profil M Zidan Zibril Irzami - profesional dengan latar belakang netral" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/46bc7dab-33c1-4a75-bb3e-d5ba05268f09.png'; this.alt='Foto profil placeholder untuk M Zidan Zibril Irzami'" />
+            </div>
+            <h1 class="text-3xl font-bold mb-2">M Zidan Zibril Irzami</h1>
+            <p class="text-lg opacity-90 mb-4">Network Specialist & Web Developer</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Perumahan Grand Graha Budiasih Asri, Blok G12 Parigi, Pangandaran</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>+6282155498976</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>cpscootz@gmail.com</span>
+                </div>
+<div class="flex items-center justify-center">
+  <i class="fas fa-globe mr-2"></i>
+  <a href="https://zdanx.github.io" target="_blank" class="text-blue-500 hover:underline">
+    zdanx.github.io
+  </a>
+</div>
+
+
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-graduation-cap mr-3 text-blue-600"></i>
+                Pendidikan
+            </h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800">SDN 01 BaleKambang</h3>
+                    <p class="text-gray-600">2013 - 2017</p>
+                    <p class="text-gray-700 mt-2">Pendidikan dasar dengan fokus pada pengembangan dasar-dasar akademik</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800">SDN 4 Karangsambung</h3>
+                    <p class="text-gray-600">2017 - 2018</p>
+                    <p class="text-gray-700 mt-2">Lanjutan pendidikan dasar dengan pengembangan kemampuan sosial</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800">MTS Manbaul Ulum</h3>
+                    <p class="text-gray-600">2018 - 2020</p>
+                    <p class="text-gray-700 mt-2">Pendidikan menengah pertama dengan integrasi nilai-nilai keagamaan</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800">SMKN Manonjaya</h3>
+                    <p class="text-gray-600">2021 - 2024</p>
+                    <p class="text-gray-700 mt-2">Pendidikan menengah kejuruan dengan spesialisasi teknologi dan jaringan</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-briefcase mr-3 text-blue-600"></i>
+                Pengalaman Kerja
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-semibold text-gray-800">Admin Online Shop (Dropship)</h3>
+                    <p class="text-blue-600 font-medium">Toko KL Sembako</p>
+                    <p class="text-gray-600">Kabupaten Tasikmalaya, Jawa Barat</p>
+                    <p class="text-gray-500 text-sm mt-2">Januari 2025</p>
+                    <p class="text-gray-700 mt-3">Mengelola penjualan online melalui sistem dropship, melayani customer service, dan mengoptimasi penjualan produk</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-purple-600">
+                    <h3 class="text-xl font-semibold text-gray-800">Operator Laundry</h3>
+                    <p class="text-purple-600 font-medium">SUN SLEEK Laundry</p>
+                    <p class="text-gray-600">Kota Tangerang Selatan, Banten</p>
+                    <p class="text-gray-500 text-sm mt-2">April 2025</p>
+                    <p class="text-gray-700 mt-3">Mengoperasikan mesin laundry, melayani pelanggan, dan memastikan kualitas layanan laundry</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-code mr-3 text-blue-600"></i>
+                Keahlian
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-network-wired text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Pengelolaan Jaringan</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-laptop-code text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Membuat Program HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 78%"></div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-paint-brush text-2xl text-pink-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Membuat Desain Grafis</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+<div class="section">
+  <h2 class="text-2xl font-bold text-gray-800 mb-2 flex items-center">
+    <i class="fas fa-certificate mr-3 text-blue-600"></i>
+    Sertifikasi
+  </h2>
+  <p class="text-sm text-gray-500 mb-6">
+    *Klik pada sertifikat untuk melihat detailnya
+  </p>
+
+
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="cert-badge" onclick="showCertificate('olimpiade-mikrotik')">
+                    <i class="fas fa-trophy mr-2"></i>
+                    <span>Olimpiade Jaringan Mikrotik (September 2023)</span>
+                </div>
+                
+                <div class="cert-badge" onclick="showCertificate('mtcna')">
+                    <i class="fas fa-award mr-2"></i>
+                    <span>MikroTik Certified Network Associate (MTCNA) (Agustus 2023)</span>
+                </div>
+                
+                <div class="cert-badge" onclick="showCertificate('software-development')">
+                    <i class="fas fa-code mr-2"></i>
+                    <span>Software Development - Flashsoft Indonesia (September 2023)</span>
+                </div>
+                
+                <div class="cert-badge" onclick="showCertificate('mikrotik-career')">
+                    <i class="fas fa-network-wired mr-2"></i>
+                    <span>Start Your Career With Mikrotik - ID Networkers (September 2023)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 py-6 text-center">
+            <p class="text-gray-600">© 2024 M Zidan Zibril Irzami. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-3">
+                <a href="tel:+6282155498976" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="mailto:cpscootz@gmail.com" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://zdanx.github.io" target="_blank" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+            <!-- Music Player -->
+<div class="music-player">
+  <h4>🎶</h4>
+  <audio id="player" autoplay controls>
+    <source src="assets/music/dj.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+</div>
+             <!-- Music Player -->
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="certificateImage" class="certificate-image" src="" alt="Preview sertifikat" / src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a430b2d6-e7dc-4a4f-ae3f-b02b10fb31e2.png">
+        </div>
+    </div>
+
+    <script>
+        // Music Player Functionality
+         const player = document.getElementById("player");
+
+  // coba langsung play
+  player.play().catch(() => {
+    // kalau gagal, tunggu interaksi pertama user di halaman
+    document.addEventListener("click", () => {
+      player.play();
+    }, { once: true });
+  });
+
+        // Animasi untuk skill bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            setTimeout(() => {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 500);
+            
+            // Event listener untuk menutup modal dengan ESC key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                }
+            });
+            
+            // Event listener untuk menutup modal dengan klik di luar konten
+            document.getElementById('certificateModal').addEventListener('click', function(event) {
+                if (event.target === this) {
+                    closeModal();
+                }
+            });
+        });
+
+        // Fungsi untuk menampilkan sertifikat
+        function showCertificate(certType) {
+            const modal = document.getElementById('certificateModal');
+            const certImage = document.getElementById('certificateImage');
+            
+            // Mapping jenis sertifikat ke path gambar
+            const certImages = {
+                'olimpiade-mikrotik': 'assets/image/OJM.jpg',
+                'mtcna': 'assets/image/MTCNA.jpg',
+                'software-development': 'assets/image/software.jpg',
+                'mikrotik-career': 'assets/image/mikrotik-career.jpg'
+            };
+            
+            // Set alt text berdasarkan jenis sertifikat
+            const certAltTexts = {
+                'olimpiade-mikrotik': 'Sertifikat Olimpiade Jaringan Mikrotik yang diterima pada September 2023',
+                'mtcna': 'Sertifikat MikroTik Certified Network Associate (MTCNA) yang diterima pada Agustus 2023',
+                'software-development': 'Sertifikat Software Development dari Flashsoft Indonesia yang diterima pada September 2023',
+                'mikrotik-career': 'Sertifikat Start Your Career With Mikrotik dari ID Networkers yang diterima pada September 2023'
+            };
+            
+            // Set gambar sertifikat
+            certImage.src = certImages[certType];
+            certImage.alt = certAltTexts[certType];
+            
+            // Fallback jika gambar tidak ditemukan
+            certImage.onerror = function() {
+                this.src = 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6f2b614-68c1-408f-8f39-7781870bd249.png' + certType.replace('-', '+');
+                this.alt = 'Placeholder untuk sertifikat ' + certType;
+            };
+            
+            // Tampilkan modal
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
+
